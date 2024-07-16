@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "transcriptcollector"
+version = "0.1.0"
+description = ""
+authors = ["JanB1989 <janbiel1989@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10.1,<4.0"
+aws-cdk-lib = "^2.147.3"
+pandas = "^2.2.2"
+# youtube-transcript-api = "^0.6.2"
+boto3 = "^1.34.140"
+pytubefix = "^5.7.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
