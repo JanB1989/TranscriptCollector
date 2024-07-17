@@ -127,6 +127,15 @@ class TranscriptCollectorProjectStack(Stack):
                                 "lambda:InvokeAsync"
                             ],
                             resources=[lambda_function.function_arn]
+                        ),
+                        iam.PolicyStatement(
+                            actions=[
+                                "logs:FilterLogEvents",
+                                "logs:GetLogEvents",
+                                "logs:DescribeLogGroups",
+                                "logs:DescribeLogStreams"
+                            ],
+                            resources=[f"arn:aws:logs:{self.region}:{self.account}:log-group:/aws/lambda/{lambda_function.function_name}:*"]
                         )
                     ]
                 )
