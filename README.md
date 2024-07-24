@@ -1,6 +1,3 @@
-
-# Welcome to Your CDK Python Project
-
 This project is designed for CDK development with Python. Its primary objective is to extract captions from YouTube videos, process them, and store the resulting transcripts and metadata in AWS services, such as S3 and DynamoDB.
 It currently uses [pytubefix](https://pytubefix.readthedocs.io/en/latest/) (contained as a layer for deployment) to fetch transcripts/metadata. I added a jupyter nobebook with some examples to scrape entire channels/videos.
 
